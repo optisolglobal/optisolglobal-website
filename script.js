@@ -46,7 +46,7 @@ document.querySelectorAll('.btn-secondary').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
         const productName = this.closest('.product-card').querySelector('h3').textContent;
-        alert(`RFQ initiated for: ${productName}\n\nPlease contact us at:\nEmail: info@optisolglobal.com\nGST: 24BECPV4228N1Z4`);
+        alert(`RFQ initiated for: ${productName}\n\nPlease contact us at:\nEmail: Optisolglobal@gmail.com\nGST: 24BECPV4228N1Z4`);
     });
 });
 
