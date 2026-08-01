@@ -1,65 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optisol Global</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Optisol Global | Industrial Oils &amp; VCI Export Packaging</title>
+<meta name="description" content="Optisol Global, Ahmedabad — VCI films, rust preventive oils, cutting oils, rust remover, desiccants and aluminium foil vacuum packaging for industrial export." />
+<meta property="og:title" content="Optisol Global | Industrial Oils &amp; VCI Export Packaging" />
+<meta property="og:description" content="Protecting every shipment. Delivering confidence. Premium VCI packaging and industrial oils from Ahmedabad, India." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<header>
-    <h1>Optisol Global</h1>
-    <p>Industrial Chemicals & Packaging Solutions</p>
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="#home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" stroke-width="3"/><path d="M24 11c5 7 8 11 8 15a8 8 0 0 1-16 0c0-4 3-8 8-15Z" fill="#F5A623"/></svg>
+      </span>
+      <span class="brand__text">
+        <strong>OPTISOL</strong>
+        <em>GLOBAL</em>
+      </span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#spotlight">RUST-X 40</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact" class="btn btn--sm">Get a Quote</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#contact">Contact</a>
-</nav>
+<main>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>Optisol Global is a trusted supplier of Cutting Oil, Silicone Oil, VCI Packaging, Bubble Wrap and Industrial Chemicals.</p>
-</section>
-
-<section id="products">
-    <h2>Our Products</h2>
-
-    <div class="product-card">
-        <h3>Cutting Oil</h3>
-        <button class="btn-secondary">Request RFQ</button>
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="eyebrow reveal">Oils &amp; VCI Export Packaging</p>
+      <h1 class="reveal">Protecting Every Shipment.<br /><span class="gold">Delivering Confidence.</span></h1>
+      <p class="hero__lead reveal">Optisol Global is your trusted partner in industrial packaging and oils — engineered corrosion protection for metal parts in storage, transit and export.</p>
+      <div class="hero__cta reveal">
+        <a href="#products" class="btn">Explore Products</a>
+        <a href="#contact" class="btn btn--ghost">Talk to Sales</a>
+      </div>
+      <ul class="hero__stats reveal">
+        <li><b data-count="9">0</b><span>Product lines</span></li>
+        <li><b data-count="100">0</b><span>% Multi-metal safe</span></li>
+        <li><b data-count="24">0</b><span>Month rust protection</span></li>
+      </ul>
     </div>
+  </section>
 
-    <div class="product-card">
-        <h3>Silicone Oil</h3>
-        <button class="btn-secondary">Request RFQ</button>
+  <section class="section" id="about">
+    <div class="container grid-2">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--dark">Who we are</p>
+        <h2>Welcome to Optisol Global</h2>
+        <p>We specialise in delivering high-performance solutions for the industrial sector, with a strong focus on premium packaging and oil products.</p>
+        <p>With a commitment to quality, innovation and customer satisfaction, we supply everything from durable industrial packaging to high-quality lubricants and oils that enhance equipment performance.</p>
+        <a href="#products" class="link-arrow">See our catalogue &rsaquo;</a>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar"><h3>Quality First</h3><p>Formulations compliant with domestic and international rust protection standards.</p></div>
+        <div class="pillar"><h3>Export Ready</h3><p>Packaging built for long sea freight, humidity and salt spray exposure.</p></div>
+        <div class="pillar"><h3>Custom Sizes</h3><p>Bags, covers and films made to your component dimensions.</p></div>
+        <div class="pillar"><h3>Multi-Metal</h3><p>Safe on ferrous and non-ferrous metals alike, with no surface treatment.</p></div>
+      </div>
     </div>
+  </section>
 
-    <div class="product-card">
-        <h3>VCI Packaging</h3>
-        <button class="btn-secondary">Request RFQ</button>
+  <section class="section section--alt" id="products">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow eyebrow--dark">Our Solutions</p>
+        <h2>Products engineered against corrosion</h2>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card__tag">Corrosion Protection</span>
+          <h3>VCI Plastic Solutions</h3>
+          <p>2D and 3D VCI films that release protective molecules forming an invisible barrier on metal surfaces.</p>
+          <ul>
+            <li>2D VCI bags &amp; sheets for components of any shape</li>
+            <li>3D covers &amp; shrouds for large machinery</li>
+            <li>Multi-metal protection, easy inspection</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__tag">Surface Restoration</span>
+          <h3>Rust Remover</h3>
+          <p>Chemical solution that eliminates iron oxide from metal surfaces, restoring parts to a clean, reliable working condition.</p>
+          <ul>
+            <li>Restores integrity and appearance</li>
+            <li>Safe on steel and alloys</li>
+            <li>Fast acting, easy rinse</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__tag">Industrial Lubricants</span>
+          <h3>Rust Prevention Oils</h3>
+          <p>Long-lasting protection against corrosion during storage, transit and export.</p>
+          <ul>
+            <li>Water displacement &amp; fingerprint neutralisation</li>
+            <li>Solvent, water, wax-based and food grade</li>
+            <li>Dip, spray or brush application</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__tag">Machining Fluids</span>
+          <h3>Cutting Oils</h3>
+          <p>Superior cooling and lubrication across every stage of modern machining.</p>
+          <ul>
+            <li>Extended tool life, better surface finish</li>
+            <li>Straight, semi-synthetic &amp; fully synthetic</li>
+            <li>Stable at high speed and pressure</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__tag">Barrier Packaging</span>
+          <h3>Aluminium Foil Vacuum Packaging</h3>
+          <p>Maximum barrier protection against moisture, oxygen, light and contaminants.</p>
+          <ul>
+            <li>Food, pharma, electronics &amp; industrial</li>
+            <li>Excellent puncture resistance</li>
+            <li>Reliable heat sealability</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__tag">Moisture Control</span>
+          <h3>Desiccant Clay &amp; Silica Gel</h3>
+          <p>Natural clay and synthetic silica gel absorbers for humid storage and shipping.</p>
+          <ul>
+            <li>100% natural, biodegradable clay</li>
+            <li>Indicating &amp; non-indicating gel variants</li>
+            <li>High adsorption, long shelf life</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__tag">Pallet &amp; Load Protection</span>
+          <h3>VCI Stretch Film</h3>
+          <p>Clarity, puncture resistance and stretch-ability for superior load stability.</p>
+          <ul>
+            <li>Manual and machine grade</li>
+            <li>12–23 micron • 300–500 mm width</li>
+            <li>Transparent and coloured options</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__tag">Protective Packaging</span>
+          <h3>Bubble Sheet &amp; VCI Bags</h3>
+          <p>Cushioned protection combined with corrosion inhibition for delicate machined parts.</p>
+          <ul>
+            <li>Custom sizes and gusseted formats</li>
+            <li>Clean, dry and easy to use</li>
+            <li>Ideal for export crates</li>
+          </ul>
+        </article>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="contact">
-    <h2>Contact Us</h2>
+  <section class="spotlight" id="spotlight">
+    <div class="container grid-2 grid-2--mid">
+      <div class="reveal">
+        <p class="eyebrow">Product Spotlight</p>
+        <h2 class="spotlight__title">RUST-X 40</h2>
+        <p class="spotlight__sub">Multipurpose Anti-Corrosion Spray</p>
+        <p>A multipurpose spray that cleans, degreases, lubricates and protects. Its thin-film rust-preventive oil dries in about 2–4 minutes to form an invisible protective layer.</p>
+        <p class="muted">Works on steel, iron, aluminium, brass, copper, zinc, nickel, chromium and other alloys.</p>
+      </div>
+      <ol class="uses reveal">
+        <li><span>01</span> Rust prevention &amp; corrosion protection</li>
+        <li><span>02</span> Degreasing &amp; cleaning</li>
+        <li><span>03</span> Lubrication &amp; loosening of parts</li>
+        <li><span>04</span> Dewatering / moisture displacement</li>
+        <li><span>05</span> Versatile multi-metal application</li>
+      </ol>
+    </div>
+  </section>
 
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required><br><br>
-        <input type="email" placeholder="Your Email" required><br><br>
-        <input type="text" placeholder="Subject" required><br><br>
+  <section class="section" id="industries">
+    <div class="container">
+      <div class="section__head reveal">
+        <p class="eyebrow eyebrow--dark">Industries We Serve</p>
+        <h2>Trusted across heavy and precision manufacturing</h2>
+      </div>
+      <div class="inds">
+        <div class="ind reveal"><h3>Engineering</h3><p>Machined components, castings and fabricated assemblies.</p></div>
+        <div class="ind reveal"><h3>Automotive</h3><p>OEM and tier-1 parts protected through the supply chain.</p></div>
+        <div class="ind reveal"><h3>Bearings</h3><p>Precision surfaces kept oxidation-free in long storage.</p></div>
+        <div class="ind reveal"><h3>Export</h3><p>Sea-freight ready packaging for humidity and salt spray.</p></div>
+      </div>
+    </div>
+  </section>
 
-        <textarea placeholder="Your Message" required></textarea><br><br>
+  <section class="section section--alt" id="contact">
+    <div class="container grid-2">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--dark">Get in touch</p>
+        <h2>Delivering Quality. Building Trust.</h2>
+        <p>Tell us about your parts, packing method and destination — we will recommend the right protection system.</p>
+        <ul class="contact-list">
+          <li><b>Address</b><span>Plot No. 45, Satvabhumi Industrial Park, Nr. Shiv Hospital, Bakrol Bujrang, Ahmedabad – 382430, Gujarat, India</span></li>
+          <li><b>Phone</b><span><a href="tel:+916351461978">+91 6351461978</a></span></li>
+          <li><b>Email</b><span><a href="mailto:optisolglobal@gmail.com">optisolglobal@gmail.com</a><br /><a href="mailto:SalesOptisolGlobal@gmail.com">SalesOptisolGlobal@gmail.com</a></span></li>
+          <li><b>Website</b><span><a href="https://www.optisolglobal.in" target="_blank" rel="noopener">www.optisolglobal.in</a></span></li>
+        </ul>
+      </div>
 
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+      <form class="form reveal" id="enquiryForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name" />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@company.com" />
+        </div>
+        <div class="field">
+          <label for="product">Product of interest</label>
+          <select id="product" name="product">
+            <option>VCI Plastic Solutions</option>
+            <option>Rust Remover</option>
+            <option>Rust Prevention Oils</option>
+            <option>Cutting Oils</option>
+            <option>Aluminium Foil Vacuum Packaging</option>
+            <option>Desiccant Clay &amp; Silica Gel</option>
+            <option>VCI Stretch Film</option>
+            <option>RUST-X 40</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Part type, quantity, destination…"></textarea>
+        </div>
+        <button class="btn btn--block" type="submit">Send Enquiry</button>
+        <p class="form__note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p><strong>OPTISOL GLOBAL</strong> — Oils &amp; VCI Export Packaging</p>
+    <p class="muted">&copy; <span id="year"></span> Optisol Global. All rights reserved.</p>
+  </div>
+</footer>
+
+<a href="#home" class="to-top" id="toTop" aria-label="Back to top">&uarr;</a>
 
 <script src="script.js"></script>
-
 </body>
 </html>
