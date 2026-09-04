@@ -209,8 +209,14 @@ p{margin:0;}
 }
 .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
 
-/* before / after compare */
-.hero-visual{position:relative;}
+/* =========================================================
+   BEFORE / AFTER COMPARE SLIDER — FIXED
+   ========================================================= */
+
+.hero-visual{
+  position:relative;
+}
+
 .compare{
   position:relative;
   width:100%;
@@ -219,100 +225,252 @@ p{margin:0;}
   overflow:hidden;
   box-shadow:0 24px 60px rgba(0,0,0,0.45);
   user-select:none;
+  isolation:isolate;
 }
+
+/* Both images ALWAYS have exactly the same size */
 .compare-img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:center center;
+}
+
+/* BEFORE image */
+.compare-before{
+  z-index:1;
+  filter:saturate(0.9);
+}
+
+/*
+   AFTER image wrapper
+
+   IMPORTANT:
+   We do NOT change its width anymore.
+   The wrapper stays 100% width and only clips the image.
+   This prevents the zoom problem.
+*/
+.compare-after-wrap{
   position:absolute;
   inset:0;
   width:100%;
   height:100%;
-  object-fit:cover;
-}
-.compare-before{filter:saturate(0.9);}
-.compare-after-wrap{
-  position:absolute;
-  inset:0;
-  width:50%;
-  height:100%;
   overflow:hidden;
+  z-index:2;
+
+  /* Default = 50% */
+  clip-path:inset(0 50% 0 0);
+  -webkit-clip-path:inset(0 50% 0 0);
 }
+
+/* AFTER image stays full-size */
 .compare-after-wrap .compare-after{
   position:absolute;
-  top:0;
-  left:0;
-  width:200%;
-  max-width:none;
+  inset:0;
+
+  width:100%;
   height:100%;
+  max-width:none;
+
   object-fit:cover;
-  object-position:left center;
+  object-position:center center;
+
+  display:block;
 }
+
+/* =========================================================
+   BEFORE / AFTER LABELS
+   ========================================================= */
+
 .compare-tag{
   position:absolute;
   top:14px;
+
+  z-index:10;
+
   font-family:var(--font-mono);
   font-size:0.68rem;
   font-weight:600;
   letter-spacing:0.1em;
   text-transform:uppercase;
+
   padding:5px 10px;
   border-radius:2px;
+
   background:rgba(11,27,38,0.72);
   color:#fff;
+
   pointer-events:none;
 }
-.compare-tag-before{left:14px;}
-.compare-tag-after{right:14px;}
+
+.compare-tag-before{
+  left:14px;
+}
+
+.compare-tag-after{
+  right:14px;
+}
+
+/* =========================================================
+   INVISIBLE SLIDER
+   ========================================================= */
+
 .compare-range{
   position:absolute;
   inset:0;
+
+  z-index:30;
+
   width:100%;
   height:100%;
+
   margin:0;
+  padding:0;
+
   opacity:0;
+
   cursor:ew-resize;
+
   -webkit-appearance:none;
   appearance:none;
 }
+
+/* =========================================================
+   SLIDER HANDLE
+   ========================================================= */
+
 .compare-handle{
   position:absolute;
-  top:0; bottom:0;
+
+  top:0;
+  bottom:0;
   left:50%;
+
   width:44px;
+
   margin-left:-22px;
+
+  z-index:20;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:1px;
+
   pointer-events:none;
-}
-.compare-handle::before{
-  content:"";
-  position:absolute;
-  top:0; bottom:0; left:50%;
-  width:2px;
-  background:#fff;
-  transform:translateX(-50%);
-}
-.compare-handle svg,
-.compare-handle svg + svg{
-  position:relative;
-  z-index:1;
-}
-.compare-handle{
+
   color:var(--ink);
 }
+
+/* Vertical line */
+.compare-handle::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  bottom:0;
+  left:50%;
+
+  width:2px;
+
+  background:#fff;
+
+  transform:translateX(-50%);
+
+  box-shadow:0 0 4px rgba(0,0,0,0.25);
+}
+
+/* White circle */
 .compare-handle::after{
   content:"";
+
   position:absolute;
-  top:50%; left:50%;
-  width:38px; height:38px;
+
+  top:50%;
+  left:50%;
+
+  width:38px;
+  height:38px;
+
   background:#fff;
+
   border-radius:50%;
+
   transform:translate(-50%,-50%);
+
   box-shadow:0 4px 14px rgba(0,0,0,0.35);
+
   z-index:0;
 }
-.compare-handle svg{z-index:2; position:relative;}
+
+/* Arrow SVGs */
+.compare-handle svg{
+  position:relative;
+
+  z-index:2;
+
+  width:14px;
+  height:14px;
+
+  flex:none;
+}
+
+.compare-handle svg + svg{
+  margin-left:-2px;
+}
+
+/* =========================================================
+   CAPTION
+   ========================================================= */
+
 .compare-caption{
+  margin-top:14px;
+
+  font-size:0.85rem;
+
+  color:#93A2AC;
+
+  font-family:var(--font-mono);
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width:720px){
+
+  .compare{
+    aspect-ratio:16/9;
+  }
+
+  .compare-tag{
+    top:10px;
+    font-size:0.62rem;
+    padding:4px 8px;
+  }
+
+  .compare-tag-before{
+    left:10px;
+  }
+
+  .compare-tag-after{
+    right:10px;
+  }
+
+  .compare-handle{
+    width:40px;
+    margin-left:-20px;
+  }
+
+  .compare-handle::after{
+    width:34px;
+    height:34px;
+  }
+}
   margin-top:14px;
   font-size:0.85rem;
   color:#93A2AC;
