@@ -471,11 +471,6 @@ p{margin:0;}
     height:34px;
   }
 }
-  margin-top:14px;
-  font-size:0.85rem;
-  color:#93A2AC;
-  font-family:var(--font-mono);
-}
 
 /* stat strip */
 .stat-strip{border-top:1px solid rgba(255,255,255,0.1); background:var(--panel);}
